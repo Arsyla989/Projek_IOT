@@ -1,0 +1,381 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+  background: #fff;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.phone-app {
+  width: 100%;
+  max-width: 585px;
+  min-height: 100vh;
+  border-left: 2px solid #aaa;
+  border-right: 2px solid #aaa;
+  position: relative;
+  padding-bottom: 68px;
+  background: #fff;
+}
+
+.topbar {
+  height: 76px;
+  background: #5899f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  color: white;
+}
+
+.brand {
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: -.7px;
+  color: white;
+  text-shadow: 0 1px 1px #ffffff40;
+}
+
+.back {
+  position: absolute;
+  left: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 36px;
+  line-height: 1;
+}
+
+.header-space {
+  position: absolute;
+  right: 20px;
+  width: 20px;
+}
+
+/* MENU UTAMA */
+
+.main-menu {
+  padding: 37px 38px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.menu-card {
+  height: 310px;
+  border: 2px solid #d3d3d3;
+  box-shadow: 0 1px 4px #0002;
+  text-decoration: none;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 9px 8px;
+  background: #fff;
+}
+
+.menu-card img {
+  width: 100%;
+  height: 235px;
+  object-fit: contain;
+}
+
+.menu-card span {
+  width: 100%;
+  height: 44px;
+  background: #5899f7;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* HALAMAN KONTROL */
+
+.page-content {
+  padding: 28px 18px 35px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 29px;
+  font-weight: 900;
+  margin: 6px 0 43px;
+  letter-spacing: -.8px;
+}
+
+/* KARTU LED */
+
+.led-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.led-card {
+  min-width: 0;
+  border: 2px solid #d4d4d4;
+  box-shadow: 0 1px 4px #0002;
+  padding: 8px 9px 9px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+}
+
+.led-image {
+  width: 100%;
+  height: 132px;
+  object-fit: contain;
+}
+
+.led-card h2 {
+  font-size: 16px;
+  text-align: center;
+  margin: 10px 0 13px;
+  min-height: 19px;
+}
+
+/* TOMBOL */
+
+.toggle {
+  border: 0;
+  background: #f00000;
+  color: white;
+  font-weight: 800;
+  font-size: 17px;
+  min-height: 44px;
+  width: 100%;
+  padding: 10px 6px;
+}
+
+.toggle.off {
+  background: #5899f7;
+}
+
+/* NAVIGASI BAWAH */
+
+.bottom-nav {
+  height: 66px;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(100%, 585px);
+  background: #5899f7;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10;
+}
+
+.bottom-nav a {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 31px;
+  font-weight: bold;
+}
+
+.bottom-nav a.nav-active {
+  background: #4a8ce9;
+}
+
+/* KONTROL KIPAS */
+
+.control-panel {
+  border: 2px solid #d5d5d5;
+  box-shadow: 0 1px 4px #0002;
+  padding: 20px;
+  text-align: center;
+}
+
+.fan-image {
+  height: 245px;
+  width: 100%;
+  object-fit: contain;
+  transition: transform .3s, filter .3s;
+}
+
+.control-panel h2 {
+  font-size: 22px;
+  margin: 8px 0 18px;
+}
+
+.speed-box {
+  margin: 27px 0 20px;
+  text-align: left;
+}
+
+.speed-box label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.speed-box input {
+  width: 100%;
+  margin: 18px 0;
+  accent-color: #5899f7;
+}
+
+.speed-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #777;
+}
+
+.mode-row {
+  display: flex;
+  gap: 7px;
+}
+
+.mode {
+  flex: 1;
+  padding: 12px 3px;
+  background: #fff;
+  border: 1px solid #5899f7;
+  color: #5899f7;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.mode.selected {
+  background: #5899f7;
+  color: white;
+}
+
+.hint {
+  color: #777;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* SENSOR MONITORING */
+
+.sensor-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sensor-card {
+  border: 2px solid #d5d5d5;
+  box-shadow: 0 1px 4px #0002;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 12px;
+  min-height: 98px;
+}
+
+.sensor-icon {
+  font-size: 30px;
+  width: 44px;
+  text-align: center;
+}
+
+.sensor-card div {
+  flex: 1;
+  min-width: 0;
+}
+
+.sensor-card h2 {
+  font-size: 14px;
+  margin: 0 0 7px;
+}
+
+.sensor-card p {
+  font-size: 11px;
+  color: #777;
+  margin: 0;
+}
+
+.sensor-card > strong {
+  font-size: 17px;
+  color: #5899f7;
+  text-align: right;
+}
+
+.sensor-card .status-demo {
+  font-size: 12px;
+}
+
+.sensor-refresh {
+  margin-top: 20px;
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 700px) {
+  body {
+    background: #f7f7f7;
+  }
+
+  .phone-app {
+    box-shadow: 0 0 0 1px #bbb;
+  }
+}
+
+@media (max-width: 430px) {
+  .main-menu {
+    padding: 25px 20px;
+  }
+
+  .menu-card {
+    height: 275px;
+  }
+
+  .menu-card img {
+    height: 205px;
+  }
+
+  .page-content {
+    padding: 25px 12px;
+  }
+
+  .led-grid {
+    gap: 10px;
+  }
+
+  .led-card {
+    padding: 7px;
+  }
+
+  .led-image {
+    height: 112px;
+  }
+
+  .led-card h2 {
+    font-size: 13px;
+  }
+
+  .toggle {
+    font-size: 14px;
+  }
+
+  .page-content h1 {
+    font-size: 25px;
+    margin-bottom: 32px;
+  }
+}

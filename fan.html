@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Fan Control - CUYLABS</title>
+
+    <!-- Hubungkan ke JavaScript -->
+    <script src="main.js" defer></script>
+
+    <!-- CSS halaman kipas -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: #eaf3ff;
+            color: #1c2b44;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            padding: 20px;
+        }
+
+        .fan-card {
+            width: 100%;
+            max-width: 350px;
+
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+
+            text-align: center;
+
+            box-shadow: 0 8px 25px
+                rgba(40, 80, 140, 0.15);
+        }
+
+        #fanImage {
+            width: 220px;
+            max-width: 100%;
+            height: auto;
+
+            object-fit: contain;
+            image-rendering: pixelated;
+
+            display: block;
+            margin: 0 auto 15px;
+        }
+
+        h2 {
+            margin: 15px 0 20px;
+            font-size: 24px;
+            color: #254b80;
+        }
+
+        #fanButton {
+            width: 100%;
+            padding: 15px;
+
+            border: none;
+            border-radius: 12px;
+
+            background-color: #5795f5;
+            color: white;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        #fanButton:hover {
+            filter: brightness(0.92);
+        }
+
+        #fanButton:disabled {
+            opacity: 0.6;
+            cursor: wait;
+        }
+
+        #connectionStatus {
+            width: 100%;
+            max-width: 350px;
+
+            margin-top: 20px;
+            padding: 12px;
+
+            text-align: center;
+            font-size: 14px;
+
+            color: #254b80;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- KARTU KIPAS -->
+    <div class="fan-card">
+
+        <!-- Gambar kipas mati -->
+        <img
+            id="fanImage"
+            src="./assets/Pixel-Art Blue Table Fan.png"
+            alt="Kipas mati"
+        >
+
+        <h2>KIPAS</h2>
+
+        <!-- Tombol kontrol kipas -->
+        <button
+            id="fanButton"
+            type="button"
+            data-state="OFF"
+        >
+            TURN ON FAN
+        </button>
+
+    </div>
+
+    <!-- Status koneksi ESP32 -->
+    <p id="connectionStatus">
+        Menunggu koneksi ESP32...
+    </p>
+
+</body>
+
+</html>

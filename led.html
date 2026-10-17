@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>CUYLABS | LED Control</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <div class="phone-app">
+
+        <!-- HEADER -->
+        <header class="topbar">
+            <a class="back" href="index.html">‹</a>
+
+            <div class="brand">CUYLABS</div>
+
+            <span class="header-space"></span>
+        </header>
+
+        <!-- KONTEN LED -->
+        <main class="page-content">
+
+            <h1>LED CONTROL</h1>
+
+            <div class="led-grid">
+
+                <!-- LED DAPUR -->
+                <article class="led-card" data-room="Dapur">
+
+                    <img
+                        class="led-image"
+                        src="assets/Off-State Pixel LED Sprite.png"
+                        alt="Lampu dapur"
+                    >
+
+                    <h2>DAPUR</h2>
+
+                    <button
+                        class="toggle off"
+                        type="button"
+                        data-endpoint="/dapur"
+                    >
+                        TURN ON
+                    </button>
+
+                </article>
+
+                <!-- LED RUANG TAMU -->
+                <article class="led-card" data-room="Ruang Tamu">
+
+                    <img
+                        class="led-image"
+                        src="assets/Off-State Pixel LED Sprite.png"
+                        alt="Lampu ruang tamu"
+                    >
+
+                    <h2>RUANG TAMU</h2>
+
+                    <button
+                        class="toggle off"
+                        type="button"
+                        data-endpoint="/tamu"
+                    >
+                        TURN ON
+                    </button>
+
+                </article>
+
+                <!-- LED RUANG MAKAN -->
+                <article class="led-card" data-room="Ruang Makan">
+
+                    <img
+                        class="led-image"
+                        src="assets/Off-State Pixel LED Sprite.png"
+                        alt="Lampu ruang makan"
+                    >
+
+                    <h2>RUANG MAKAN</h2>
+
+                    <button
+                        class="toggle off"
+                        type="button"
+                        data-endpoint="/makan"
+                    >
+                        TURN ON
+                    </button>
+
+                </article>
+
+                <!-- LED TOILET -->
+                <article class="led-card" data-room="Toilet">
+
+                    <img
+                        class="led-image"
+                        src="assets/Off-State Pixel LED Sprite.png"
+                        alt="Lampu toilet"
+                    >
+
+                    <h2>TOILET</h2>
+
+                    <button
+                        class="toggle off"
+                        type="button"
+                        data-endpoint="/toilet"
+                    >
+                        TURN ON
+                    </button>
+
+                </article>
+
+            </div>
+
+            <!-- STATUS KONEKSI -->
+            <p id="connectionStatus" role="status">
+                Menghubungkan ke ESP32...
+            </p>
+
+            <button
+                id="buzzerButton"
+                type="button"
+            >
+                BUZZER ON
+            </button>
+
+        </main>
+
+        <!-- NAVIGASI BAWAH -->
+        <nav class="bottom-nav">
+
+            <a href="index.html" aria-label="Home">⌂</a>
+
+            <a
+                class="nav-active"
+                href="led.html"
+                aria-label="LED"
+            >♙</a>
+
+            <a href="fan.html" aria-label="Fan">✿</a>
+
+            <a href="sensor.html" aria-label="Sensor">♟</a>
+
+        </nav>
+
+    </div>
+</body>
+</html>
